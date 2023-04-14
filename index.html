@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<!--índica que se trata de um documento html-->
+<html>
+  <!--tag raíz-->
+  <head>
+    <!--tag ref. a cabeça da página. Elemento é um container para metadados (dados sobre dados), e é colocado entre as tags <html> e <body>. Os seguinte elementos podem ir dentro de <head>: <title> (exigido em todo documento html); <estilo>; <base> ; <link>; <meta>; <script>; <noscript> -->
+    <meta charset="utf-8" />
+    <!--define os metadados (dados sobre dados) sempre fica dentro do elemento <head> e normalmente são usadas para especificar o conjunto de caracteres, a descrição d página, as palavras-chave, o autor e as configurações de viewport (a viewport é a área vísivel do usuário de uma página da web. O viewport não varia de acordo com o dispositivo e será menor em um telefone celular que em uma tela de desktoo, notebook ou tablet.)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Landing Page - DEVPROZ 2022</title>
+    <!--Título da página na aba de navegação. É uma tag necessária em documentos HTML-->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!--define um relacionamento entre o documento HTML e um recurso externo. É onde se vincula a folha de estilo .css, rescursos como bootstrap (framework para para desenvolvimento de componentes de interface e front-end) e favicon ao site. O <link é um elemento vazio, contém apenas atributos. Neste caso, está sendo setado o arquivo ref. ao bootstrap. -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-spy="scroll" data-target="#nav-menu" data-offset="150">
+    <!--Define o corpo do documento HTML, como cabeçalhos, parágrafos, imagens, hiperlinks, tabelas, listas, etc...-->
+    <header>
+      <!-- O <header> é um elemento que representa um container para conteúdo introdutório ou um conjunto de links de navegação. É um elemento que contém um ou mais elementos de cabeçalho (<h1> - <h6>), logotipo ou ícone e informações de autoria. Pode-se ter vários <header> dentro de um documento HTML. No entato, <header> não pode ser colocado dentro de um <footer>, <address> ou outro <header> elemento.-->
+      <div id="banner">
+        <!--Define uma seção ou divisão em um documento HTML. É usada como container para elementos HTML - que são estilizados com CSS ou manipulados com JavaScript. A tag <div> é facilmente estilizada usando o atributo class ou id. Qualquer tipo de conteúdo pode ser colocado dentro da <div> tag.-->
+        <h1>DEVPROZ 2023</h1>
+        <!--Define o cabeçalho título mais importante, ou seja, maior. Use apenas um <h1> por página - isso deve representar o cabeçalho/assunto principal de toda a página. Além disso, não pule os níveis de títulos - comece com <h1>, depois use <h2>, e assim por diante.-->
+        <h2>Exemplo de uma One Page com Bootstrap</h2>
+      </div>
+      <nav class="navbar navbar-inverse" id="navbar">
+        <!--A <nav>tag define um conjunto de links de navegação. Observe que nem todos os links de um documento devem estar dentro de um <nav>elemento. O <nav>elemento destina-se apenas aos principais blocos de links de navegação. Navegadores, como leitores de tela para usuários desativados, podem usar esse elemento para determinar se devem omitir a renderização inicial desse conteúdo.-->
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle collapsed"
+              data-toggle="collapse"
+              data-target="#nav-menu"
+            >
+              <span class="icon-bar"></span>
+              <!--A <span>tag é um contêiner embutido usado para marcar uma parte de um texto ou uma parte de um documento.
+                A <span>tag é facilmente estilizada por CSS ou manipulada com JavaScript usando o atributo class ou id.
+                A <span>tag é muito parecida com o elemento <div> , mas <div> é um elemento de nível de bloco e <span>é um elemento inline.-->
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!--A <button>tag define um botão clicável.
+                Dentro de um <button>elemento você pode colocar texto (e tags como <i>, <b>, <strong>, <br>, <img>, etc.). Isso não é possível com um botão criado com o <input>elemento!
+                Dica: Sempre especifique o typeatributo para um <button>elemento, para informar aos navegadores que tipo de botão é.
+                Dica: Você pode facilmente estilizar botões com CSS!-->
+            <a class="navbar-brand" href="#banner">DEVPROZ</a>
+            <!--A <a>tag define um hiperlink, que é usado para vincular de uma página a outra. O atributo mais importante do <a>elemento é o hrefatributo, que indica o destino do link. Por padrão, os links aparecerão da seguinte maneira em todos os navegadores:
+                - Um link não visitado é sublinhado e azul
+                - Um link visitado é sublinhado e roxo
+                - Um link ativo é sublinhado e vermelho-->
+          </div>
+
+          <div class="collapse navbar-collapse" id="nav-menu">
+            <ul class="nav navbar-nav navbar-right">
+              <!--A <ul>tag define uma lista não ordenada (marcada). Use a <ul>tag junto com a tag <li> para criar listas não ordenadas. 
+                Dica: Use CSS para estilizar listas .
+                Dica: Para listas ordenadas, use a tag <ol>.-->
+              <li><a href="#sobre">Sobre</a></li>
+              <!--<li> define itens de uma lista. A <li>tag é usada dentro de listas ordenadas ( <ol> ), listas não ordenadas ( <ul> ) e em listas de menu ( <menu> ). Em <ul> e <menu>, os itens da lista geralmente serão exibidos com marcadores. Em <ol>, os itens da lista geralmente serão exibidos com números ou letras. Dica: Use CSS para estilizar as listas -->
+              <li><a href="#modulo">Módulos</a></li>
+              <li><a href="#professores">Professores</a></li>
+              <li><a href="#local">Como Chegar</a></li>
+              <li>
+                <a href="" data-toggle="modal" data-target="#modal-contato"
+                  >Contato</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!--A <main>tag especifica o conteúdo principal de um documento.
+        O conteúdo dentro do <main>elemento deve ser exclusivo do documento. Ele não deve conter nenhum conteúdo repetido em documentos, como barras laterais, links de navegação, informações de direitos autorais, logotipos de sites e formulários de pesquisa.
+        Nota: Não deve haver mais de um <main>elemento em um documento. O <main>elemento NÃO deve ser descendente de um elemento <article>, <aside>, <footer>, <header> ou <nav>.-->
+      <section id="sobre">
+        <!--A <section>tag define uma seção em um documento.-->
+        <div class="container">
+          <div class="row text-center">
+            <h3 class="title">SOBRE</h3>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div
+                id="carousel-sobre"
+                class="carousel slide"
+                data-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="img/curso_00.png" alt=".net" />
+                    <!--A <img>tag é usada para incorporar uma imagem em uma página HTML.
+
+                        As imagens não são tecnicamente inseridas em uma página da web; as imagens estão vinculadas a páginas da web. A <img>tag cria um espaço de retenção para a imagem referenciada.
+                        
+                        A <img>tag tem dois atributos obrigatórios:
+                        
+                        src - Especifica o caminho para a imagem
+                        alt - Especifica um texto alternativo para a imagem, se a imagem por algum motivo não puder ser exibida
+                        
+                        Observação: Além disso, sempre especifique a largura e a altura de uma imagem. Se largura e altura não forem especificadas, a página pode piscar enquanto a imagem é carregada.
+                        Dica: Para vincular uma imagem a outro documento, basta aninhar a <img>tag dentro de uma tag <a> (veja o exemplo abaixo).-->
+                  </div>
+                  <div class="item">
+                    <img src="img/curso_01.png" alt="java jsf" />
+                  </div>
+                  <div class="item">
+                    <img src="img/curso_02.png" alt="css3" />
+                  </div>
+                </div>
+                <a
+                  class="left carousel-control"
+                  href="#carousel-sobre"
+                  data-slide="prev"
+                >
+                  <span class="icon-prev"></span>
+                </a>
+                <a
+                  class="right carousel-control"
+                  href="#carousel-sobre"
+                  data-slide="next"
+                >
+                  <span class="icon-next"></span>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-6 content">
+              <h4>
+                Landing da melhor turma de nível técnico em Desenvolvimento de
+                Sistemas de Divinópolis/MG, a DEVPROZ.
+              </h4>
+              <p>
+                <!--A <p>tag define um parágrafo.
+                Os navegadores adicionam automaticamente uma única linha em branco antes e depois de cada <p> elemento.
+                Dica: Use CSS para estilizar parágrafos .-->
+                São 6 meses juntos aprendendo desenvolvimento de sistemas da
+                melhor forma possível, na rática.
+                <br />
+                <!--A <br>tag insere uma única quebra de linha.
+                    A <br>tag é útil para escrever endereços ou poemas.
+                    A <br>tag é uma tag vazia, o que significa que não tem tag final.-->
+                Com cursos focados na funcionalidade do código. Na DEVPROZ
+                aprendemos com quem programa de verdade!
+                <br />
+                Faça parte dessa turma, informe-se sobre novas turmas junto ao
+                contato: prozeducacao@prozeducacao.com.br.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="modulo">
+        <div class="container">
+          <div class="row text-center">
+            <h3 class="title">MÓDULO ATUAL - Administração de Web Sites</h3>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <ul class="nav nav-tabs">
+                <li class="active">
+                  <a href="#semana_1" data-toggle="tab">Semana 1</a>
+                </li>
+                <li><a href="#semana_2" data-toggle="tab">Semana 2</a></li>
+                <li><a href="#semana_3" data-toggle="tab">Semana 3</a></li>
+                <li><a href="#semana_4" data-toggle="tab">Semana 4</a></li>
+                <li><a href="#semana_5" data-toggle="tab">Semana 5</a></li>
+                <li><a href="#semana_6" data-toggle="tab">Semana 6</a></li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active" id="semana_1">
+                  <div class="list-group">
+                    <span class="list-group-item active">
+                      <h4 class="list-group-item-heading">29/3 13:00h</h4>
+                      <p class="list-group-item-text">
+                        Conceito de Internet e Mercado de Internet
+                      </p>
+                    </span>
+                    <span class="list-group-item">
+                      <h4 class="list-group-item-heading">31/3 13:00h</h4>
+                      <p class="list-group-item-text">Estrutura de Web Sites</p>
+                    </span>
+                  </div>
+                </div>
+                <div class="tab-pane" id="semana_2">
+                  <div class="list-group">
+                    <span class="list-group-item">
+                      <h4 class="list-group-item-heading">4/4 13:00h</h4>
+                      <p class="list-group-item-text">
+                        Tecnologias de Web Sites
+                      </p>
+                    </span>
+                    <span class="list-group-item">
+                      <h4 class="list-group-item-heading">5/4 13:00h</h4>
+                      <p class="list-group-item-text">
+                        Responsividade / Documentação para Web
+                      </p>
+                  </div>
+                </div>
+                <div class="tab-pane" id="semana_3">
+                  <div class="list-group">
+                    <span class="list-group-item">
+                      <h4 class="list-group-item-heading">10/4 13:00h</h4>
+                      <p class="list-group-item-text">
+                        Atividade Prática Responsividade
+                      </p>
+                    </span>
+                    <span class="list-group-item">
+                      <h4 class="list-group-item-heading">12/4 13:00h</h4>
+                      <p class="list-group-item-text">
+                        Plataformas de Desenvolvimento Web
+                      </p>
+                    </span>
+                    <span class="list-group-item">
+                      <h4 class="list-group-item-heading">14/4 13:00h</h4>
+                      <p class="list-group-item-text">
+                        Layout e Design Digital
+                      </p>
+                    </span>
+                  </div>
+                </div>
+                <div class="tab-pane" id="semana_4">
+                  <div class="list-group">
+                    <span class="list-group-item">
+                      <h4 class="list-group-item-heading">18/4 13:00h</h4>
+                      <p class="list-group-item-text"> Atividade Prática no laboratório referente a
+                        Responsividade</p>
+                    </span>
+                    <span class="list-group-item">
+                      <h4 class="list-group-item-heading">19/4 13:00h</h4>
+                      <p class="list-group-item-text">Conteúdos para WebSites / Conteúdos para Redes Sociais</p>
+                    </span>
+                    <span class="list-group-item">
+                      <h4 class="list-group-item-heading">20/4 13:00h</h4>
+                      <p class="list-group-item-text">
+                        Plataformas de Marketing
+                      </p>
+                    </span>
+                  </div>
+                </div>
+                  <div class="tab-pane" id="semana_5">
+                    <div class="list-group">
+                      <span class="list-group-item">
+                        <h4 class="list-group-item-heading">24/4 13:00h</h4>
+                        <p class="list-group-item-text"> Atividade Prática no laboratório referente a
+                          Conteúdo para Websites e para Redes Sociais</p>
+                      </span>
+                      <span class="list-group-item">
+                        <h4 class="list-group-item-heading">26/4 13:00h</h4>
+                        <p class="list-group-item-text">Análise de portais</p>
+                      </span>
+                      <span class="list-group-item">
+                        <h4 class="list-group-item-heading">28/4 13:00h</h4>
+                        <p class="list-group-item-text">
+                          Revisão + Prova Final
+                        </p>
+                      </span>
+                    </div>
+                </div>
+                <div class="tab-pane" id="semana_6">
+                  <div class="list-group">
+                    <span class="list-group-item">
+                      <h4 class="list-group-item-heading">02/5 13:00h</h4>
+                      <p class="list-group-item-text"> SoftSkill: Comunicação</p>
+                    </span>
+                    <span class="list-group-item">
+                      <h4 class="list-group-item-heading">03/5 13:00h</h4>
+                      <p class="list-group-item-text">Avaliação Integrada</p>
+                    </span>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="professores">
+        <div class="container">
+          <div class="row text-center">
+            <h3 class="title">CONHEÇA OS PROFESSORES</h3>
+          </div>
+          <div class="row">
+            <div class="col-sm-5 col-md-3">
+              <div class="thumbnail">
+                <img src="./img/FelipeDePaula_01.jpeg" alt="Mestre Yoda" />
+                <div class="caption">
+                  <h3>Felipe de Paula</h3>
+                  <p> 
+                    Engenheiro da Computação. É professor universitário e de
+                    nível técnico, atuando em disciplinas de programação,
+                    projeto de sistemas e banco de dados.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-5 col-md-3">
+              <div class="thumbnail">
+                <img src="./img/Eduardo_02.jpg" alt="Eduardo" />
+                <div class="caption">
+                  <h3>Eduardo Oliveira</h3>
+                  <p>
+                    Bacharel em Sistemas de Informação. Possui experiência de
+                    vários anos no ensino de programação para nível
+                    universitário e técnico.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-5 col-md-3">
+              <div class="thumbnail">
+                <img src="./img/Yoda_03.jpg" alt="Mestre Yoda" />
+                <div class="caption">
+                  <h3>Mestre Yoda</h3>
+                  <p>
+                    Embora avesso a tecnologia, Yoda não deixa de ser um mestre
+                    para nós. Como um jedi sábio e experiente, ele valoriza a
+                    sabedoria e a intuição.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-5 col-md-3">
+              <div class="thumbnail">
+                <img src="./img/MMagos_04.jpg" alt="Mestre dos Magos" />
+                <div class="caption">
+                  <h3>Mestre dos Magos</h3>
+                  <p>
+                    O Mestre dos Magos é um mentor para nós, oferecendo
+                    orientação e conselhos. acredita na importância de usar a
+                    magia de forma responsável e equilibrada
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="local">
+        <div class="container-fluid">
+          <div class="row text-center">
+            <h3 class="title">COMO CHEGAR</h3>
+          </div>
+          <div class="row iframe-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3745.723402287563!2d-44.88879398603861!3d-20.145583886483333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa0a5bf0e73a641%3A0xcf620e61fd109983!2sProz!5e0!3m2!1spt-BR!2sbr!4v1681299590267!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </section>
+      <section id="assine">
+        <div class="container">
+          <div class="row text-center">
+            <h3 class="title">FIQUE POR DENTRO</h3>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <h4>Esteja sempre atualizado sobre os ultimos eventos!</h4>
+            </div>
+            <div class="col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+              <form
+                method="POST"
+                action="http://arquivo.prozdevsistemas.com.br/projeto/requisicao.php"
+                target="_blank"
+              >
+                <div class="input-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    placeholder="Digite o seu email"
+                    required
+                  />
+                  <span class="input-group-btn">
+                    <button class="btn btn-success" type="subimit">
+                      Enviar!
+                    </button>
+                  </span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <!--Define o rodapé de documento HTML ou seção. Um <footer>elemento normalmente contém:
+         - Informações de autoria
+         - Informações sobre direitos autorais
+         - Informações de contato
+         - Mapa do site
+         - Voltar aos links principais
+         - Documentos relacionados
+         - Você pode ter vários <footer>elementos em um documento.-->
+      <div class="footer-links">
+        <a
+          href="https://www.youtube.com"
+          target="_blank"
+          class="icon-social youtube"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Assista"
+        ></a>
+        <a
+          href="http://twitter.com"
+          target="_blank"
+          class="icon-social twitter"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Comente"
+        ></a>
+        <a
+          href="https://www.facebook.com"
+          target="_blank"
+          class="icon-social facebook"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Compartilhe"
+        ></a>
+      </div>
+      <p class="text-center">© 2023 - One Page Bootstrap DEVPROZ - Proz</p>
+    </footer>
+
+    <div class="modal fade" id="modal-contato" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+            <h4 class="modal-title">Deixe o seu contato</h4>
+          </div>
+          <div class="modal-body">
+            <form
+              method="POST"
+              action="http://arquivo.prozdevsistemas.com.br/projeto/requisicao.php"
+              target="_blank"
+            >
+              <div class="form-group">
+                <label for="nome" class="control-label">Nome</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="nome"
+                  placeholder="Digite o seu nome"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email" class="control-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  placeholder="Digite o seu email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="mensagem" class="control-label">Messagem</label>
+                <textarea
+                  class="form-control"
+                  name="mensagem"
+                  placeholder="Digite a sua mensagem"
+                  rows="6"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <!--A <script>tag é usada para incorporar um script do lado do cliente (JavaScript).
+        O <script>elemento contém instruções de script ou aponta para um arquivo de script externo por meio do atributo src.        
+        Usos comuns para JavaScript são manipulação de imagem, validação de formulário e alterações dinâmicas de conteúdo. -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
