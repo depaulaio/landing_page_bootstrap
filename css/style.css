@@ -1,0 +1,127 @@
+#banner {
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 20px;
+    color: white;
+
+    background-image: url("../img/banner.jpg");
+    background-size: cover;
+    background-position: center;
+
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: multiply;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#banner h1 {
+    margin-bottom: 10px;
+    font-size: 80px;
+}
+#banner h2 {
+    margin: 0;
+    font-size: 30px;
+    text-align: center;
+}
+#navbar{
+    margin: 0;
+    border-radius: 0;
+}
+section {
+    box-sizing: border-box;
+    padding: 20px 0 50px;
+}
+section:nth-child(odd){
+    background-color: #e2e2e2;
+}
+section .title{
+    display: inline-block;
+    margin: 10px auto 40px;
+    padding: 0 10px 5px;
+    border-bottom: 3px solid #222222;
+}
+#sobre .content{
+    padding-top:20px;
+}
+
+#palestrantes .thumbnail img{
+    width: 100%;
+}
+#local{
+    padding-bottom: 0;
+}
+#local iframe{
+    pointer-events: none;
+    display: block;
+}
+#local iframe.active{
+    pointer-events: auto;
+}
+#assine{
+    padding: 50px 20px 70px;
+}
+#assine h4{
+    text-align: right;
+}
+footer{
+    background-color: #222222;
+    padding:20px;
+    color: white;
+}
+.footer-links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 15px auto;
+}
+.icon-social{
+    height: 40px;
+    width: 40px;
+    display: block;
+    background-size: contain;
+    margin: 5px 15px;
+}
+.icon-social.facebook{
+    background-image: url("../img/facebook-logo.png");
+}
+.icon-social.twitter{
+    background-image: url("../img/twitter-logo.png");
+}
+.icon-social.youtube{
+    background-image: url("../img/youtube-logo.png");
+}
+
+.affix{
+    top: 0;
+    width: 100%;
+    z-index: 20;
+}
+
+@media screen and (max-width: 767px) {
+    #assine h4{
+        text-align: center;
+    }
+    #palestrantes .thumbnail{
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+}
+
+@media screen and (max-width: 425px) {
+    #banner h1 {
+        font-size: 60px;
+    }
+    #banner h2 {
+        font-size: 20px;
+    }
+    section .title{
+        font-size: 16px;
+    }
+    #palestrantes .thumbnail h3{
+        font-size: 18px;
+    }
+}
+
