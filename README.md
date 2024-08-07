@@ -1,1 +1,1 @@
-# landing page boortstrap e jquery
+# landing page boortstrap and jquery
